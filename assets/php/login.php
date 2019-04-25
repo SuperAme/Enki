@@ -5,9 +5,7 @@
         session_start();
         $mysqli -> set_charset('utf8');
         $user = $mysqli -> real_escape_string($_POST['name']);
-        $pass = $mysqli -> real_escape_string($_POST['pwd']);
-
-        
+        $pass = $mysqli -> real_escape_string($_POST['pwd']);        
         
         if($query = $mysqli -> prepare("SELECT * FROM user WHERE name = ? ")){
 

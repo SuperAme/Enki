@@ -4,6 +4,6 @@
     $user = $_SESSION['usuario']['name'];
     $type = $_SESSION['usuario']['type'];
     if($type != 'E'){
-        header('location: php/logout.php');
+        header('location: assets/php/logout.php');
     }
 ?>
