@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="assets/js/login.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js" type="text/javascript"></script>
+    
     <title>Viviendas</title>
 </head>
 <body>
@@ -23,6 +23,7 @@
             </div>            
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-    </div> 
+    </div>
+    <script src="assets/js/login.js"></script> 
 </body>
 </html>
