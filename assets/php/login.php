@@ -18,7 +18,7 @@
             $resultado = $query -> get_result();        
             if($resultado -> num_rows == 1){
                 $data = $resultado -> fetch_assoc();
-                //$_SESSION['usuario'] = $data;
+                $_SESSION['usuario'] = $data;
                 $pass_hash = $data['pass'];
                 if(password_verify($pass,$pass_hash)){
                     echo json_encode(array('error' => false, 'type' => $data['type'],'name' => $data['name']));

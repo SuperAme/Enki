@@ -9,7 +9,15 @@ jQuery(document).on('submit','#login', function(event){
             console.log("enviando...")
         },
         success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
-            console.log(response)
+            if(response.error == false){
+                if(response.type == 'C'){
+                    location.href='./clients.php'
+                }else if(response.type == 'E'){
+                    location.href='./employees.php'
+                }
+            }else{
+                alert('Datos no validos')
+            }
     }
     })
 })
