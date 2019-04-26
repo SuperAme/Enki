@@ -1,0 +1,10 @@
+Se ingresa al sitio con los usuarios: cliente1 con contraseña cliente1 y empleado1 con contraseña empleado1, 
+al login se le implemento un método de contraseña cifrada.
+Como servidor local se utilizo xampp, en la carpeta assets/database se encuentra el dump de la base 
+para poder montarla en un servidor local.
+
+Ademas de mandar el archivo en .rar, se puede descargar desde mi repositorio en github: https://github.com/SuperAme/Enki
+
+Autor:Américo Meneses Quintero
+correo: beatamez@hotmail.com
+celular: 5558182636
