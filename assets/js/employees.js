@@ -51,16 +51,42 @@ function search2(){
         alert('Hubo un error')
     })
 }
-/*$.ajax({prop,modalidad
-    url: 'assets/php/consulta.php',
-    type: 'GET',
-    dataType: 'html',
-    /*dataType: 'html',*/  
-    /*success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
-        console.log("mm")
-        $("#cont").html(response)
-    },
-    error: function(){
-        console.log("error")
-    }
-})*/
+function select_vivienda(){
+    var id = $("#combobox").val();
+    var a = {"id":id};
+    $.ajax({
+        data: a,
+        url: "assets/php/mostrar_datos.php",
+        type: "post",
+        success: function(response){                                    
+            $("#panel_consulta").html(response);
+        }
+    })
+}
+function actualizarV(){
+    let identify = $("#input_identify").val();
+    let tipo = $("#input_tipo").val(); 
+    let prop = $("#input_prop").val(); 
+    let input_recamaras = $("#input_recamaras").val();
+    let precio = $("#input_precio").val();
+    let input_modalidad = $("#input_modalidad").val();
+    let input_pais = $("#input_pais").val();
+    let input_estado = $("#input_estado").val();
+    $.post("assets/php/update_vivienda.php",{
+        "identify": identify,
+        "tipo": tipo,
+        "prop": prop,
+        "input_recamaras":input_recamaras,
+        "precio":precio,
+        "input_modalidad":input_modalidad,
+        "input_pais": input_pais,
+        "input_estado": input_estado
+    }).done(function(data){
+        if (data.includes('insert')){
+            alert("Registro actualizado");
+            location.reload()
+        }else{
+            alert("error")
+        }
+    })
+}

@@ -21,6 +21,16 @@
 </head>
 <body>
     <div class="container">
+    <nav class="navbar navbar-dark bg-dark navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header" style="color:#FFF">
+        <p>Hola <?php echo $user; ?></p>
+        </div>        
+        <ul class="nav navbar-nav navbar-right">
+        <li><a href="assets/php/logout.php">Cerrar Sesión</a></li>        
+        </ul>
+    </div>
+    </nav> 
         <div class="col-12">
             <div class="row">
                 <div class="form-group col-sm-4 col-lg-2">
