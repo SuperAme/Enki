@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     $.ajax({
         url: 'assets/php/consulta.php',
         type: 'GET',
@@ -12,7 +13,21 @@ $(document).ready(function(){
         }
     })
 })
-/*$.ajax({
+
+
+function search(){
+    var valor = $('#tipo').val()
+    $.ajax({
+        type: 'POST',
+        url: 'assets/php/consulta.php',
+        data: {'valor':valor},
+    }).done(function(response){
+        $(".list").html(response)
+    }).fail(function(){
+        alert('Hubo un error')
+    })
+}
+/*$.ajax({prop,modalidad
     url: 'assets/php/consulta.php',
     type: 'GET',
     dataType: 'html',
