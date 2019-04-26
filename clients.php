@@ -25,15 +25,15 @@
             <div class="row">
                 <div class="form-group col-sm-4 col-lg-2">
                     <label for="">Tipo:</label>
-                    <input type="text" onkeyup="search()" class="form-control" id="tipo" name="tipo" placeholder="Buscar por tipo..">
+                    <input type="text" onkeyup="search()" class="form-control tipo" name="tipo" placeholder="Buscar por tipo..">
                 </div>
                 <div class="form-group col-sm-4 col-lg-2">
                     <label for="prop">Propietario:</label>
-                    <input type="text" class="form-control" name="prop" placeholder="Buscar por propietario..">
+                    <input type="text" onkeyup="search1()" class="form-control prop" name="prop" placeholder="Buscar por propietario..">
                 </div>
                 <div class="form-group col-sm-4 col-lg-2">
                     <label for="modalidad">Modalidad:</label>
-                    <input type="text" class="form-control"  name="modalidad" placeholder="Buscar por modalidad..">
+                    <input type="text" onkeyup="search2()" class="form-control modalidad"  name="modalidad" placeholder="Buscar por modalidad..">
                 </div>
             </div>
         </div>

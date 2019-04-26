@@ -16,11 +16,35 @@ $(document).ready(function(){
 
 
 function search(){
-    var valor = $('#tipo').val()
+    var valor = $('.tipo').val()
     $.ajax({
         type: 'POST',
         url: 'assets/php/consulta.php',
         data: {'valor':valor},
+    }).done(function(response){
+        $(".list").html(response)
+    }).fail(function(){
+        alert('Hubo un error')
+    })
+}
+function search1(){
+    var valor1 = $('.prop').val()
+    $.ajax({
+        type: 'POST',
+        url: 'assets/php/consulta.php',
+        data: {'valor1':valor1},
+    }).done(function(response){
+        $(".list").html(response)
+    }).fail(function(){
+        alert('Hubo un error')
+    })
+}
+function search2(){
+    var valor2 = $('.modalidad').val()
+    $.ajax({
+        type: 'POST',
+        url: 'assets/php/consulta.php',
+        data: {'valor2':valor2},
     }).done(function(response){
         $(".list").html(response)
     }).fail(function(){
